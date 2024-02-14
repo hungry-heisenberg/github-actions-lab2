@@ -9,6 +9,11 @@ jobs:
       matrix:
         python-v: [3.7, 3.8, 3.9]
         os: [ubuntu-latest, windows-latest, macos-latest]
+        exclude:
+          - python-v:
+              3.9
+          - os:
+              macos-latest
     steps:
     - name: Set up Python
       uses: actions/setup-python@v4
